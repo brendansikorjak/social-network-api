@@ -65,4 +65,60 @@ module.exports = {
       res.status(500).json({ error: 'Server error' });
     }
   },
+  // ADD a friend to a user's friend list
+  // async addFriend(req, res) {
+  //   const { userId, friendId } = req.params;
+
+  //   try {
+  //     // Check if both the user and friend exist
+  //     const user = await User.findById(userId);
+  //     const friend = await User.findById(friendId);
+
+  //     if (!user || !friend) {
+  //       return res.status(404).json({ error: 'User or friend not found' });
+  //     }
+
+  //     // Check if the friend is already in the user's friend list
+  //     if (user.friends.includes(friendId)) {
+  //       return res.status(400).json({ error: 'Friend already added' });
+  //     }
+
+  //     // Add the friend to the user's friend list
+  //     user.friends.push(friendId);
+  //     await user.save();
+
+  //     res.status(200).json(user);
+  //   } catch (error) {
+  //     res.status(500).json({ error: 'Server error' });
+  //   }
+  // },
+  // // REMOVE a friend from a user's friend list
+  // async deleteFriend(req, res) {
+  //   const { userId, friendId } = req.params;
+
+  //   try {
+  //     // Check if the user exists
+  //     const user = await User.findById(userId);
+
+  //     if (!user) {
+  //       return res.status(404).json({ error: 'User not found' });
+  //     }
+
+  //     // Check if the friend is in the user's friend list
+  //     const index = user.friends.indexOf(friendId);
+  //     if (index === -1) {
+  //       return res
+  //         .status(404)
+  //         .json({ error: "Friend not found in user's friend list" });
+  //     }
+
+  //     // Remove the friend from the user's friend list
+  //     user.friends.splice(index, 1);
+  //     await user.save();
+
+  //     res.status(200).json(user);
+  //   } catch (error) {
+  //     res.status(500).json({ error: 'Server error' });
+  //   }
+  // },
 };
